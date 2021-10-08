@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+body{
+  position: relative;
+}
+
+.sideMenu{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 350px; 
+  height: 100%;
+  background-color: #24804d;
+}
+
+.sideMenu .intSec{
+  width: 100%;
+  background-color: #4da876;
+}
+
+.sideMenu .intSec .logo{
+  height: 150px;
+}
+
+.sideMenu .intSec .time{
+  height: 30px;
+  background-color: #3f8f63;
+}
+
+.main{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #e2e2e2;  
+}
+
+.header{
+  display: flex;
+}
+
+.pageTitle{
+  width: calc(100% - 50px);
+  height: 50px;
+  padding-left: 350px;
+  background-color: #24804d;
+}
+
+.msgBtn{
+  width: 50px;
+  height: 50px;
+  background-color: #bd654b;
+  border: none;
+  color: #fff;
+}
+.msgBtn i{
+  font-size: 1.5em;
+}
+
+.contentsWrap{
+  margin: 30px 50px 30px 400px;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.contBox{
+  height: 30em;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin-bottom: 40px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 8px 10px #9f9f9f;
+}
+
+.contBox:last-child{
+  margin-bottom: 10px;
+}
+
+.msgWrap{
+  display: flex;
+}
