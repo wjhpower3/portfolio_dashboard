@@ -11,6 +11,7 @@ body{
   width: 350px; 
   height: 100%;
   background-color: #24804d;
+  z-index: 10;
 }
 
 .sideMenu .intSec{
@@ -27,16 +28,42 @@ body{
   background-color: #3f8f63;
 }
 
+.sideMenu .navSec{
+  margin-top: 10em;
+}
+
+.sideMenu .navSec li.on,
+.sideMenu .navSec li:hover{
+  background-color: #e2e2e2;
+  border-radius: 20px 0 0 20px;
+}
+
+.sideMenu .navSec li.on a,
+.sideMenu .navSec li:hover a{
+  color: #000;
+}
+
+.sideMenu .navSec li a{
+  padding: 1.5em 0 1.5em 3em;
+  font-size: 20px;
+  color: #fff;
+}
+
+.sideMenu .navSec li a i{
+  margin-right: 10px;
+}
+
 .main{
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: 100vh;
   overflow: hidden;
   background-color: #e2e2e2;  
 }
 
 .header{
   display: flex;
+  flex-direction: row;
 }
 
 .pageTitle{
@@ -53,30 +80,116 @@ body{
   border: none;
   color: #fff;
 }
+
 .msgBtn i{
+  display: none;
   font-size: 1.5em;
 }
 
-.contentsWrap{
-  margin: 30px 50px 30px 400px;
-  padding: 20px;
+.msgBtn i.on{
+  display: block;
+}
+
+.contentsWrap{  
+  display: flex;
+  margin: 20px 20px 20px 380px;
+  padding: 0 20px;
+}
+
+.contentsWrap .gridWrap{
+  width: 100%;
+  height: calc(100vh - 90px);
   overflow-y: auto;
+  transition: width .3s;
+}
+
+.contentsWrap .gridWrap.msgOn{
+  width: calc(100% - 350px);
+}
+
+.contentsWrap .gridWrap::-webkit-scrollbar {
+  width: 12px;
+}
+.contentsWrap .gridWrap::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+.contentsWrap .gridWrap::-webkit-scrollbar-track {
+  background-color: #fff;
+  border-radius: 10px;
 }
 
 .contBox{
-  height: 30em;
+  height: 20em;
   overflow-x: hidden;
   overflow-y: auto;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
+  padding: 20px;
   background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0px 8px 10px #9f9f9f;
+  /* box-shadow: 0px 8px 10px #9f9f9f; */
 }
 
 .contBox:last-child{
-  margin-bottom: 10px;
+  margin-bottom: 0;
+}
+
+.contBox.col_span2{
+  height: calc(40em + 30px);
+}
+
+.contBox.firstGrid{
+  margin-top: 0;
+}
+
+.contBox .contTit{
+  font-size: 1.25em
 }
 
 .msgWrap{
+  width: 0px;  
+  height: calc(100vh - 90px);
+  position: fixed;
+  top: 70px;
+  right: 0;
+  transition: width .3s;  
+}
+
+.msgWrap.on{
+  width: 350px;
+}
+
+.msgWrap .msgApp{
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 10px 0 0 10px;
+  box-shadow: -10px 0 10px #ccc;
+  overflow-y: hidden;
+}
+
+.msgWrap .step1{
+  height: 100%;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.msgWrap .step1 i{
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 20px;
+}
+
+.msgWrap .step1 input{
+  width: 200px;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 5px 0 5px 5px;
+  padding: 5px;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }

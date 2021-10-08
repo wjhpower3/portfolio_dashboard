@@ -50,21 +50,64 @@
 	<div class="main" role="main">
 		<div class="header">
 			<div class="pageTitle"></div>
-			<button type="button" class="msgBtn">
+			<button type="button" id="msgBtn" class="msgBtn" onclick="msgAppOn()">
 				<i class="fas fa-comment-dots"></i>
+				<i class="fas fa-times on"></i>
 			</button>
 		</div>
 		<div class="contentsWrap">
-			<div class="gridWrap">
-				<div class="contBox col_lg6"></div>
-				<div class="contBox col_lg6"></div>
-				<div class="contBox col_lg12"></div>
+			<div id="contents" class="gridWrap msgOn">
+				<div class="contBox col_lg3 firstGrid">
+					<h2 class="contTit">Visitor</h2>
+				</div>
+				<div class="contBox col_lg3 firstGrid">
+					<h2 class="contTit">Trend</h2>
+				</div>
+				<div class="contBox col_lg3 firstGrid">
+					<h2 class="contTit">Trend</h2>
+				</div>
+				<div class="contBox col_lg3 firstGrid">
+					<h2 class="contTit">Trend</h2>
+				</div>
+				<div class="contBox col_lg3">
+					<h2 class="contTit">Trend</h2>
+				</div>
+				<div class="contBox col_lg9">
+					<h2 class="contTit">Trend</h2>
+				</div>
+				<div class="contBox col_lg3 col_span2">
+					<h2 class="contTit">Trend</h2>
+				</div>
+				<div class="contBox col_lg6">
+					<h2 class="contTit">Trend</h2>
+				</div>
+				<div class="contBox col_lg3">
+					<h2 class="contTit">Trend</h2>
+				</div>
+				<div class="contBox col_lg6">
+					<h2 class="contTit">Trend</h2>
+				</div>
+				<div class="contBox col_lg3">
+					<h2 class="contTit">Trend</h2>
+				</div>
+				<div class="contBox col_lg12">
+					<h2 class="contTit">title</h2>
+				</div>
+			</div>
+
+			<div id="msgApp" class="msgWrap on">
+				<div class="msgApp">
+					<div class="step1">
+						<div class="inputWrap"><i class="fas fa-user mr5"></i><input type="text" name="" id="" placeholder="using your name"></div>
+						<div class="inputWrap"><i class="fas fa-lock mr5"></i><input type="password" name="" id="" placeholder="password"></div>
+					</div>
+					<div class="step2">
+		
+					</div>
+				</div>
 			</div>
 		</div>
-		<div class="msgWrap">
-			<input type="text" name="" id="" placeholder="using your name">
-			<input type="password" name="" id="">
-		</div>
+		
 	</div>
 	<script src="js/jQuery.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
